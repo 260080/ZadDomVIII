@@ -1,0 +1,84 @@
+
+
+Klasa Connection - odpowiedzialna za ³¹czenie siê z baz¹ danych. 
+Atrybuty:
+Host - typ string
+Database - typ string
+Login - typ string
+Passwd - typ string
+
+Metody:
+		bool Connect(host,database,login,passwd) - zwraca true lub false
+
+Klasa Autentykacja - odpowiedzialna za rejestracjê i logowanie.
+Atrybuty:
+Login - typ string
+Has³o - typ string
+Sesja_id - typ int
+
+
+Metody:
+		SprawdzCzyZalogowany() - Sesja_id 
+		Logowanie(Login,Has³o) - 0,1
+		Rejestracja(lista stringów) - 0,1
+		WalidacjaDanych(lista stringów) - 0,1
+
+Klasa Adm_Oferta
+Atrybuty:
+oferta - odwo³uje siê do klasy oferta
+
+Metody:
+		DodanieOferty(oferta) - 0,1
+		UsuwanieOferty(oferta) - 0,1
+		EdycjaOferty(oferta) - 0,1
+
+
+		
+		
+Klasa Rezerwacja
+Atrybuty:
+idOfery - typ int
+idU¿ytkownika - typ int
+
+
+Metody:
+		Rezerwacja(idOferty,idU¿ytkownika) - 0,1
+		AnulowanieRezerwacji(idOferty, idU¿ytkownika) - 0,1 
+		
+Klasa Wyszukiwarka
+Atrybuty:
+miasto - typ string
+termin_przyjazdu - typ date
+termin_wyjazdu - typ date
+rodzaj_noclegu - typ int
+adres - typ string
+cena - typ int
+dodatkowe_informacje - typ int
+Metody:
+		Szukanie(lista stringów) - idOferty[] 
+		ZaawansowaneSzukanie(lista stringów) - idOferty[] 
+
+Klasa Oferta
+Atrybuty:
+miasto - typ string
+termin_przyjazdu - typ date
+termin_wyjazdu - typ date
+rodzaj_noclegu - typ int
+adres - typ string
+cena - typ int
+dodatkowe_informacje[] - typ int
+wspó³rzêdne_geograficzne - typ string
+idOfery - typ int
+
+Metody:
+		getMiejscowoœæ() - miasto
+		getAdres() - adres
+		getRodzajNoclegu() - rodzaj_noclegu
+		getDodatkoweInformacje() - dodatkowe_informacje[]
+		getTerminPrzyjazdu() - termin_przyjazdu
+		getTerminWyjazdu() - termin_wyjazdu
+		getCena() - cena
+		WyswietlanieOfert(idOferty) - 
+		WyswietlanieOferty_id(idOferty) - 
+
+ 
